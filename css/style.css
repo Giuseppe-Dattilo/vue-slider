@@ -1,0 +1,95 @@
+/* Reset */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Generics */
+
+body{
+font-family: sans-serif;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Carousel */
+
+#carousel{
+height: 400px;
+width: 700px;
+margin: 30px auto;
+position: relative;
+}
+
+.gallery{
+height: 100%;
+}
+
+.gallery img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 10px;
+/* display: none; */
+}
+
+.gallery img.active {
+display: block;
+}
+
+/* Button */
+
+#carousel .fas:hover{
+color: dodgerblue;
+}
+
+#carousel .fas{
+font-size: 2rem;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+}
+
+#prev {
+right: calc(100% + 30px);
+}
+
+#next {
+left: calc(100% + 30px);;
+}
+
+/* Thumbnails */
+#thumbnails{
+width: 700px;
+height: 80px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+#thumbnails img {
+width: 19%;
+height: 100%;
+border-radius: 10px;
+filter: grayscale(1);
+transition: filter 0.5s, transform 0.5;
+cursor: pointer;
+}
+
+#thumbnails img:hover{
+filter: grayscale(0);
+box-shadow: 0 0 10px yellow;
+transform: scale(1.1) ;
+}
+
+#thumbnails img.active{
+filter: grayscale(0);
+box-shadow: 0 0 10px dodgerblue;
+}
